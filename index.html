@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--        LINK  PARA  LAS  CLASES-->
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+<!--lINK  PARA  LOS  ICONOS  DE  GOOGLE-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper #00b0ff light-blue accent-3">
+          <a href="#!" class="brand-logo"> Bitacora </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="">Lo de Hoy</a></li>
+            <li><a href="">Pendientes</a></li>
+            <li><a href="">Lo que Hicimos</a></li>
+            
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="">Lo de Hoy</a></li>
+            <li><a href="">Pendientes</a></li>
+            <li><a href="">Lo que Hicimos</a></li>
+            
+          </ul>
+        </div>
+    </nav>
+    <h3 class="blue-text text-darken-5 col s12">¿Qué vamos  hacer hoy?</h3>
+    <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="btn-floating btn-large red">
+          <i class="material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red" href="#modalMensaje"><i class="material-icons">chat</i></a></li>
+          <li><a class="btn-floating yellow darken-1" href="#modalImagen"><i class="material-icons">perm_media</i></a></li>
+          <li><a class="btn-floating green" href="#modalEvento"><i class="material-icons">today</i></a></li>
+          <li><a class="btn-floating blue" href="#modalVideo"><i class="material-icons">video_library</i></a></li>
+        </ul>
+    </div>
+    <div class="modal" id="modalMensaje">
+         <div class="modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="input_text" type="text" data-length="10">
+                <label for="input_text">Titulo</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                <label for="textarea1">Texto</label>
+              </div>
+              <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+                <i class=" material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+    <div class="modal" id="modalImagen">
+         <div class="modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="input_text" type="text" data-length="10">
+                <label for="input_text">Titulo de la  Imagen</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>Imagen</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                </form>
+              </div>
+              <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+                <i class=" material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+    <div class="modal" id="modalEvento">
+         <div class="modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="input_text" type="text" data-length="10">
+                <label for="input_text">Titulo del Evento</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                    <input type="date" class="datepicker" id="modal-event-date" placeholder="Fecha del evento">
+              </div>
+              <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+                <i class=" material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+     <div class="modal" id="modalVideo">
+         <div class="modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="input_text" type="text" data-length="10">
+                <label for="input_text">Titulo del Video</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>Video</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                </form>
+              </div>
+              <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+                <i class=" material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>      
+ 
+   
+    <script src="assets/js/jquery.js"></script>    
+    <script src="assets/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $('.modal').modal();
+    })
+    
+    </script>
+</body>
+</html>
