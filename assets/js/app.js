@@ -4,7 +4,8 @@ var enviarMensaje = document.getElementById("mensajeSend");
 
 enviarMensaje.addEventListener("click", mostarPublicacion);
 
-function mostarPublicacion(){
+function mostarPublicacion(e){
+    e.preventDefault()
     var publicar = document.getElementById("publicar");
     var nuevaPublicacion = document.createElement("div");
     var nuevoTexto = document.createElement("p");
